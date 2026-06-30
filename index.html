@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TravelGeorgia — მარტივი landing page საქართველოში მოგზაურობის შესახებ">
+  <title>TravelGeorgia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="cookieBox" class="cookie-box">
+    <p>საიტი იყენებს cookies-ს უკეთესი გამოცდილებისთვის.</p>
+    <button id="acceptCookies" class="btn" type="button">ვეთანხმები</button>
+  </div>
+
+  <header id="header" class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home">TravelGeorgia</a>
+
+      <nav id="nav" class="nav" aria-label="მთავარი ნავიგაცია">
+        <a href="#home">მთავარი</a>
+        <a href="#destinations">მიმართულებები</a>
+        <a href="#tours">ტურები</a>
+        <a href="#about">ჩვენს შესახებ</a>
+        <a href="#contact">კონტაქტი</a>
+      </nav>
+
+      <button id="burger" class="burger" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-content">
+        <h1>აღმოაჩინე საქართველო</h1>
+        <p>TravelGeorgia გეხმარება მარტივად დაგეგმო მოგზაურობა თბილისში, ბათუმში, კახეთსა და ყაზბეგში.</p>
+        <a href="#contact" class="btn">დაგვიკავშირდი</a>
+      </div>
+    </section>
+
+    <section id="destinations" class="section">
+      <div class="container">
+        <h2>პოპულარული მიმართულებები</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>თბილისი</h3>
+            <p>ძველი ქალაქი, აბანოთუბანი, ნარიყალა და ქართული სამზარეულო.</p>
+          </article>
+          <article class="card">
+            <h3>ყაზბეგი</h3>
+            <p>მთები, გერგეტის სამება და ულამაზესი ბუნება.</p>
+          </article>
+          <article class="card">
+            <h3>ბათუმი</h3>
+            <p>ზღვა, ბოტანიკური ბაღი და თანამედროვე ბულვარი.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tours" class="section light-section">
+      <div class="container">
+        <h2>ტურები სერვერიდან</h2>
+        <p class="small-text">მონაცემები იტვირთება.</p>
+        <div id="tourList" class="cards">
+          <p>იტვირთება...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <article>
+          <h2>ჩვენს შესახებ</h2>
+          <p>TravelGeorgia არის ტურისტული სააგენტოს რომელიც გთავაზობთ სანდო და დამამახსოვრებელ სერვისს.</p>
+        </article>
+        <aside class="info-box">
+          <h3>რატომ ჩვენ?</h3>
+          <ul>
+            <li>ადგილობრივი გიდები</li>
+            <li>მარტივი დაჯავშნა</li>
+            <li>მოქნილი ფასები</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section light-section">
+      <div class="container">
+        <h2>სტატისტიკა</h2>
+        <div class="stats">
+          <article><strong>15+</strong><span>წელი გამოცდილება</span></article>
+          <article><strong>50+</strong><span>მარშრუტი</span></article>
+          <article><strong>5000+</strong><span>მოგზაური</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container form-wrap">
+        <h2>რეგისტრაცია</h2>
+        <form id="registerForm" class="form" novalidate>
+          <label>
+            სახელი
+            <input id="name" type="text" placeholder="თქვენი სახელი">
+            <span class="error" id="nameError"></span>
+          </label>
+
+          <label>
+            ელ-ფოსტა
+            <input id="email" type="email" placeholder="example@mail.com">
+            <span class="error" id="emailError"></span>
+          </label>
+
+          <label>
+            პაროლი
+            <div class="password-row">
+              <input id="password" type="password" placeholder="მინ. 8 სიმბოლო">
+              <button id="togglePassword" type="button">ჩვენება</button>
+            </div>
+            <span class="error" id="passwordError"></span>
+          </label>
+
+          <button class="btn" type="submit">გაგზავნა</button>
+          <p id="successMsg" class="success" hidden>ფორმა წარმატებით გაიგზავნა!</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 TravelGeorgia. ყველა უფლება დაცულია.</p>
+    </div>
+  </footer>
+
+  <button id="scrollTop" class="scroll-top" type="button">↑</button>
+  <script src="main.js"></script>
+</body>
+</html>
